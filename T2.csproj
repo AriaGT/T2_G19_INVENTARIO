@@ -50,35 +50,35 @@
     <Compile Include="Clases\Productos.cs" />
     <Compile Include="Entidades\Categoria.cs" />
     <Compile Include="Entidades\Producto.cs" />
-    <Compile Include="FormCategoria.cs">
+    <Compile Include="Forms\FormCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCategoria.Designer.cs">
+    <Compile Include="Forms\FormCategoria.Designer.cs">
       <DependentUpon>FormCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPrincipal.cs">
+    <Compile Include="Forms\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrincipal.Designer.cs">
+    <Compile Include="Forms\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Inventario.cs" />
     <Compile Include="Entidades\Listado.cs" />
-    <Compile Include="FormProducto.cs">
+    <Compile Include="Forms\FormProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProducto.Designer.cs">
+    <Compile Include="Forms\FormProducto.Designer.cs">
       <DependentUpon>FormProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCategoria.resx">
+    <EmbeddedResource Include="Forms\FormCategoria.resx">
       <DependentUpon>FormCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrincipal.resx">
+    <EmbeddedResource Include="Forms\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProducto.resx">
+    <EmbeddedResource Include="Forms\FormProducto.resx">
       <DependentUpon>FormProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

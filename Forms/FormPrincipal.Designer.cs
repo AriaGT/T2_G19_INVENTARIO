@@ -40,7 +40,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabProductos = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.G19_DgvProductos = new System.Windows.Forms.DataGridView();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.G19_BtnEliminarProducto = new System.Windows.Forms.Button();
+            this.G19_BtnEditarProducto = new System.Windows.Forms.Button();
             this.G19_BtnCrearProducto = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -57,27 +64,21 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.G19_BtnEliminarCategoria = new System.Windows.Forms.Button();
+            this.G19_BtnEditarCategoria = new System.Windows.Forms.Button();
             this.G19_BtnCrearCategoria = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.G19_TxtBuscarCategoria = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.G19_DgvProductos = new System.Windows.Forms.DataGridView();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.G19_BtnEditarProducto = new System.Windows.Forms.Button();
-            this.G19_BtnEliminarProducto = new System.Windows.Forms.Button();
-            this.G19_BtnEliminarCategoria = new System.Windows.Forms.Button();
-            this.G19_BtnEditarCategoria = new System.Windows.Forms.Button();
             this.tabStock.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabBusqueda.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabProductos.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.G19_DgvProductos)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.G_19_Tbcontrol.SuspendLayout();
@@ -87,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.G19_DgvCategorias)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.G19_DgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStock
@@ -216,6 +216,51 @@
             this.panel5.Size = new System.Drawing.Size(672, 424);
             this.panel5.TabIndex = 14;
             // 
+            // G19_DgvProductos
+            // 
+            this.G19_DgvProductos.AllowUserToAddRows = false;
+            this.G19_DgvProductos.AllowUserToDeleteRows = false;
+            this.G19_DgvProductos.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.G19_DgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.G19_DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.G19_DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNombre,
+            this.colPrecio,
+            this.colStock,
+            this.colCategoria});
+            this.G19_DgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.G19_DgvProductos.Location = new System.Drawing.Point(0, 0);
+            this.G19_DgvProductos.Name = "G19_DgvProductos";
+            this.G19_DgvProductos.ReadOnly = true;
+            this.G19_DgvProductos.RowHeadersVisible = false;
+            this.G19_DgvProductos.Size = new System.Drawing.Size(456, 424);
+            this.G19_DgvProductos.TabIndex = 14;
+            // 
+            // colNombre
+            // 
+            this.colNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
+            // 
+            // colStock
+            // 
+            this.colStock.HeaderText = "Stock";
+            this.colStock.Name = "colStock";
+            this.colStock.ReadOnly = true;
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            this.colCategoria.ReadOnly = true;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.G19_BtnEliminarProducto);
@@ -233,6 +278,24 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(4);
             this.panel3.Size = new System.Drawing.Size(216, 424);
             this.panel3.TabIndex = 13;
+            // 
+            // G19_BtnEliminarProducto
+            // 
+            this.G19_BtnEliminarProducto.Location = new System.Drawing.Point(113, 48);
+            this.G19_BtnEliminarProducto.Name = "G19_BtnEliminarProducto";
+            this.G19_BtnEliminarProducto.Size = new System.Drawing.Size(95, 23);
+            this.G19_BtnEliminarProducto.TabIndex = 14;
+            this.G19_BtnEliminarProducto.Text = "Eliminar";
+            this.G19_BtnEliminarProducto.UseVisualStyleBackColor = true;
+            // 
+            // G19_BtnEditarProducto
+            // 
+            this.G19_BtnEditarProducto.Location = new System.Drawing.Point(8, 48);
+            this.G19_BtnEditarProducto.Name = "G19_BtnEditarProducto";
+            this.G19_BtnEditarProducto.Size = new System.Drawing.Size(95, 23);
+            this.G19_BtnEditarProducto.TabIndex = 13;
+            this.G19_BtnEditarProducto.Text = "Editar";
+            this.G19_BtnEditarProducto.UseVisualStyleBackColor = true;
             // 
             // G19_BtnCrearProducto
             // 
@@ -410,6 +473,24 @@
             this.panel2.Size = new System.Drawing.Size(216, 424);
             this.panel2.TabIndex = 15;
             // 
+            // G19_BtnEliminarCategoria
+            // 
+            this.G19_BtnEliminarCategoria.Location = new System.Drawing.Point(113, 50);
+            this.G19_BtnEliminarCategoria.Name = "G19_BtnEliminarCategoria";
+            this.G19_BtnEliminarCategoria.Size = new System.Drawing.Size(95, 23);
+            this.G19_BtnEliminarCategoria.TabIndex = 16;
+            this.G19_BtnEliminarCategoria.Text = "Eliminar";
+            this.G19_BtnEliminarCategoria.UseVisualStyleBackColor = true;
+            // 
+            // G19_BtnEditarCategoria
+            // 
+            this.G19_BtnEditarCategoria.Location = new System.Drawing.Point(8, 50);
+            this.G19_BtnEditarCategoria.Name = "G19_BtnEditarCategoria";
+            this.G19_BtnEditarCategoria.Size = new System.Drawing.Size(95, 23);
+            this.G19_BtnEditarCategoria.TabIndex = 15;
+            this.G19_BtnEditarCategoria.Text = "Editar";
+            this.G19_BtnEditarCategoria.UseVisualStyleBackColor = true;
+            // 
             // G19_BtnCrearCategoria
             // 
             this.G19_BtnCrearCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -473,88 +554,6 @@
             this.label4.Size = new System.Drawing.Size(96, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Buscar por nombre";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // G19_DgvProductos
-            // 
-            this.G19_DgvProductos.AllowUserToAddRows = false;
-            this.G19_DgvProductos.AllowUserToDeleteRows = false;
-            this.G19_DgvProductos.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.G19_DgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.G19_DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.G19_DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNombre,
-            this.colPrecio,
-            this.colStock,
-            this.colCategoria});
-            this.G19_DgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.G19_DgvProductos.Location = new System.Drawing.Point(0, 0);
-            this.G19_DgvProductos.Name = "G19_DgvProductos";
-            this.G19_DgvProductos.ReadOnly = true;
-            this.G19_DgvProductos.RowHeadersVisible = false;
-            this.G19_DgvProductos.Size = new System.Drawing.Size(456, 424);
-            this.G19_DgvProductos.TabIndex = 14;
-            // 
-            // colNombre
-            // 
-            this.colNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            this.colPrecio.ReadOnly = true;
-            // 
-            // colStock
-            // 
-            this.colStock.HeaderText = "Stock";
-            this.colStock.Name = "colStock";
-            this.colStock.ReadOnly = true;
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoria";
-            this.colCategoria.Name = "colCategoria";
-            this.colCategoria.ReadOnly = true;
-            // 
-            // G19_BtnEditarProducto
-            // 
-            this.G19_BtnEditarProducto.Location = new System.Drawing.Point(8, 48);
-            this.G19_BtnEditarProducto.Name = "G19_BtnEditarProducto";
-            this.G19_BtnEditarProducto.Size = new System.Drawing.Size(95, 23);
-            this.G19_BtnEditarProducto.TabIndex = 13;
-            this.G19_BtnEditarProducto.Text = "Editar";
-            this.G19_BtnEditarProducto.UseVisualStyleBackColor = true;
-            // 
-            // G19_BtnEliminarProducto
-            // 
-            this.G19_BtnEliminarProducto.Location = new System.Drawing.Point(113, 48);
-            this.G19_BtnEliminarProducto.Name = "G19_BtnEliminarProducto";
-            this.G19_BtnEliminarProducto.Size = new System.Drawing.Size(95, 23);
-            this.G19_BtnEliminarProducto.TabIndex = 14;
-            this.G19_BtnEliminarProducto.Text = "Eliminar";
-            this.G19_BtnEliminarProducto.UseVisualStyleBackColor = true;
-            // 
-            // G19_BtnEliminarCategoria
-            // 
-            this.G19_BtnEliminarCategoria.Location = new System.Drawing.Point(113, 50);
-            this.G19_BtnEliminarCategoria.Name = "G19_BtnEliminarCategoria";
-            this.G19_BtnEliminarCategoria.Size = new System.Drawing.Size(95, 23);
-            this.G19_BtnEliminarCategoria.TabIndex = 16;
-            this.G19_BtnEliminarCategoria.Text = "Eliminar";
-            this.G19_BtnEliminarCategoria.UseVisualStyleBackColor = true;
-            // 
-            // G19_BtnEditarCategoria
-            // 
-            this.G19_BtnEditarCategoria.Location = new System.Drawing.Point(8, 50);
-            this.G19_BtnEditarCategoria.Name = "G19_BtnEditarCategoria";
-            this.G19_BtnEditarCategoria.Size = new System.Drawing.Size(95, 23);
-            this.G19_BtnEditarCategoria.TabIndex = 15;
-            this.G19_BtnEditarCategoria.Text = "Editar";
-            this.G19_BtnEditarCategoria.UseVisualStyleBackColor = true;
             // 
             // FormPrincipal
             // 
@@ -573,6 +572,7 @@
             this.groupBox2.PerformLayout();
             this.tabProductos.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.G19_DgvProductos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -584,7 +584,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.G19_DgvProductos)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -106,7 +106,6 @@ namespace T2
                 if (inventario != null)
                 {
                     G19_DgvProductos.Rows.Add(
-                        null,
                         inventario.nombre,
                         inventario.precio,
                         inventario.cantidad,
@@ -126,7 +125,6 @@ namespace T2
                 if (inventario != null)
                 {
                     G19_DgvProductos.Rows.Add(
-                        null,
                         inventario.nombre,
                         inventario.precio,
                         inventario.cantidad,
@@ -153,11 +151,6 @@ namespace T2
             FormCategoria formCategoria = new FormCategoria(G19_categorias);
             formCategoria.ShowDialog();
             G19_ActualizarTablas();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
