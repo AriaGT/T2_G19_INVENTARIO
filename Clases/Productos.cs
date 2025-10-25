@@ -107,5 +107,34 @@ namespace T2.Clases
             }
             return null;
         }
+
+        public G19_Producto G19_BuscarProductoPorNombre(string nombre)
+        {
+            if (string.IsNullOrWhiteSpace(nombre))
+                throw new ArgumentException("El nombre de búsqueda no puede estar vacío.", nameof(nombre));
+
+            try
+            {
+                return G19_BuscarProductoPorNombreRecursivo(nombre.Trim(), 0);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Error al buscar la categoría: " + ex.Message, ex);
+            }
+        }
+
+        private G19_Producto G19_BuscarProductoPorNombreRecursivo(string nombre, int indice)
+        {
+            if (indice >= G19_contadorProductos)
+                return null;
+
+            if (G19_ListaProductos[indice] != null &&
+                G19_ListaProductos[indice].nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase))
+            {
+                return G19_ListaProductos[indice];
+            }
+
+            return G19_BuscarProductoPorNombreRecursivo(nombre, indice + 1);
+        }
     }
 }
