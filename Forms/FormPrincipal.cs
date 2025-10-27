@@ -103,7 +103,7 @@ namespace T2
 
         private int G19_CalcularStockRecursivo(int G19_categoriaId, int G19_indice)
         {
-            // Caso base: si llegamos al final de la lista
+            
             if (G19_indice >= G19_productos.G19_ListaProductos.Count)
             {
                 return 0;
@@ -112,13 +112,13 @@ namespace T2
             var G19_producto = G19_productos.G19_ListaProductos[G19_indice];
             int G19_stockActual = 0;
 
-            // Si el producto pertenece a la categoría, sumamos su stock
+            
             if (G19_producto != null && G19_producto.G19_categoria_id == G19_categoriaId)
             {
                 G19_stockActual = G19_producto.G19_stock;
             }
 
-            // Llamada recursiva para el siguiente producto
+            
             return G19_stockActual + G19_CalcularStockRecursivo(G19_categoriaId, G19_indice + 1);
         }
 
