@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using T2.Clases;
+using T2.Entidades;
 
 namespace T2
 {
@@ -20,6 +21,10 @@ namespace T2
 
             G19_DgvProductos.AutoGenerateColumns = false;
             G19_DgvCategorias.AutoGenerateColumns = false;
+
+            G19_TxtBuscarCategoria.TextChanged += G19_TxtBuscarCategoria_TextChanged;
+            G19_TxtBuscarProducto.TextChanged += G19_TxtBuscarProducto_TextChanged;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -151,6 +156,126 @@ namespace T2
             FormCategoria formCategoria = new FormCategoria(G19_categorias);
             formCategoria.ShowDialog();
             G19_ActualizarTablas();
+        }
+
+        private void G19_TxtBuscarCategoria_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string nombreBusqueda = G19_TxtBuscarCategoria.Text.Trim();
+
+                G19_DgvCategorias.Rows.Clear();
+
+                if (string.IsNullOrWhiteSpace(nombreBusqueda))
+                {
+                    // Si está vacío, mostrar todas las categorías
+                    for (int i = 0; i < G19_categorias.G19_ObtenerCantidadCategorias(); i++)
+                    {
+                        var categoria = G19_categorias.G19_ListaCategorias[i];
+                        if (categoria != null)
+                        {
+                            G19_DgvCategorias.Rows.Add(categoria.id, categoria.nombre);
+                        }
+                    }
+                }
+                else
+                {
+                    // Buscar la categoría específica
+                    G19_Categoria encontrada = G19_categorias.G19_BuscarCategoriaPorNombre(nombreBusqueda);
+
+                    if (encontrada != null)
+                    {
+                        G19_DgvCategorias.Rows.Add(encontrada.id, encontrada.nombre);
+                    }
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error de operación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void G19_TxtBuscarProducto_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string nombreBusqueda = G19_TxtBuscarProducto.Text.Trim();
+
+                G19_DgvProductos.Rows.Clear();
+
+                if (string.IsNullOrWhiteSpace(nombreBusqueda))
+                {
+                    // Si está vacío, mostrar todos los productos
+                    for (int i = 0; i < G19_productos.G19_ObtenerCantidadProductos(); i++)
+                    {
+                        var producto = G19_productos.G19_ListaProductos[i];
+                        if (producto != null)
+                        {
+                            string nombreCategoria = "Sin categoria";
+                            if (producto.categoria_id != -1)
+                            {
+                                var categoria = G19_categorias.G19_BuscarCategoriaPorId(producto.categoria_id);
+                                if (categoria != null)
+                                {
+                                    nombreCategoria = categoria.ToString();
+                                }
+                            }
+
+                            G19_DgvProductos.Rows.Add(
+                                producto.nombre,
+                                producto.precio,
+                                producto.stock,
+                                nombreCategoria
+                            );
+                        }
+                    }
+                }
+                else
+                {
+                    // Buscar el producto específico
+                    G19_Producto encontrado = G19_productos.G19_BuscarProductoPorNombre(nombreBusqueda);
+
+                    if (encontrado != null)
+                    {
+                        string nombreCategoria = "Sin categoría";
+                        if (encontrado.categoria_id != -1)
+                        {
+                            var categoria = G19_categorias.G19_BuscarCategoriaPorId(encontrado.categoria_id);
+                            if (categoria != null)
+                            {
+                                nombreCategoria = categoria.ToString();
+                            }
+                        }
+
+                        G19_DgvProductos.Rows.Add(
+                            encontrado.nombre,
+                            encontrado.precio,
+                            encontrado.stock,
+                            nombreCategoria
+                        );
+                    }
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error de operación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

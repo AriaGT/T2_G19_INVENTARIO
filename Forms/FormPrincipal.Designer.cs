@@ -35,6 +35,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabBusqueda = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.G19_LblResultado = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.G19_BtnBuscar = new System.Windows.Forms.Button();
             this.G19_TxtBoxBuscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +52,7 @@
             this.G19_BtnEditarProducto = new System.Windows.Forms.Button();
             this.G19_BtnCrearProducto = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.G19_TxtBuscarProducto = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -155,21 +157,42 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.G19_LblResultado);
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.G19_BtnBuscar);
             this.groupBox2.Controls.Add(this.G19_TxtBoxBuscar);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(101, 51);
+            this.groupBox2.Location = new System.Drawing.Point(32, 21);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(323, 227);
+            this.groupBox2.Size = new System.Drawing.Size(449, 227);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Busqueda de producto por nombre";
             // 
+            // G19_LblResultado
+            // 
+            this.G19_LblResultado.AutoSize = true;
+            this.G19_LblResultado.BackColor = System.Drawing.Color.Transparent;
+            this.G19_LblResultado.Location = new System.Drawing.Point(143, 177);
+            this.G19_LblResultado.Name = "G19_LblResultado";
+            this.G19_LblResultado.Size = new System.Drawing.Size(36, 13);
+            this.G19_LblResultado.TabIndex = 5;
+            this.G19_LblResultado.Text = "reyhre";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(37, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Resultado:";
+            // 
             // G19_BtnBuscar
             // 
-            this.G19_BtnBuscar.Location = new System.Drawing.Point(128, 140);
+            this.G19_BtnBuscar.Location = new System.Drawing.Point(87, 103);
             this.G19_BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.G19_BtnBuscar.Name = "G19_BtnBuscar";
             this.G19_BtnBuscar.Size = new System.Drawing.Size(56, 19);
@@ -180,7 +203,7 @@
             // 
             // G19_TxtBoxBuscar
             // 
-            this.G19_TxtBoxBuscar.Location = new System.Drawing.Point(148, 72);
+            this.G19_TxtBoxBuscar.Location = new System.Drawing.Point(128, 51);
             this.G19_TxtBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.G19_TxtBoxBuscar.Name = "G19_TxtBoxBuscar";
             this.G19_TxtBoxBuscar.Size = new System.Drawing.Size(97, 20);
@@ -189,7 +212,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(82, 76);
+            this.label5.Location = new System.Drawing.Point(37, 58);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
@@ -267,7 +290,7 @@
             this.panel3.Controls.Add(this.G19_BtnEditarProducto);
             this.panel3.Controls.Add(this.G19_BtnCrearProducto);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.G19_TxtBuscarProducto);
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label1);
@@ -317,13 +340,14 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Buscar por nombre";
             // 
-            // textBox1
+            // G19_TxtBuscarProducto
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 100);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 8;
+            this.G19_TxtBuscarProducto.Location = new System.Drawing.Point(8, 100);
+            this.G19_TxtBuscarProducto.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.G19_TxtBuscarProducto.Name = "G19_TxtBuscarProducto";
+            this.G19_TxtBuscarProducto.Size = new System.Drawing.Size(200, 20);
+            this.G19_TxtBuscarProducto.TabIndex = 8;
+            this.G19_TxtBuscarProducto.TextChanged += new System.EventHandler(this.G19_TxtBuscarProducto_TextChanged);
             // 
             // groupBox1
             // 
@@ -544,6 +568,7 @@
             this.G19_TxtBuscarCategoria.Name = "G19_TxtBuscarCategoria";
             this.G19_TxtBuscarCategoria.Size = new System.Drawing.Size(200, 20);
             this.G19_TxtBuscarCategoria.TabIndex = 8;
+            this.G19_TxtBuscarCategoria.TextChanged += new System.EventHandler(this.G19_TxtBuscarCategoria_TextChanged);
             // 
             // label4
             // 
@@ -607,7 +632,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox G19_TxtBuscarProducto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabCategorias;
         private System.Windows.Forms.Button G19_BtnCrearCategoria;
@@ -639,6 +664,8 @@
         private System.Windows.Forms.Button G19_BtnEditarProducto;
         private System.Windows.Forms.Button G19_BtnEliminarCategoria;
         private System.Windows.Forms.Button G19_BtnEditarCategoria;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label G19_LblResultado;
     }
 }
 
