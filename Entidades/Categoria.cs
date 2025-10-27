@@ -4,16 +4,18 @@ namespace T2.Entidades
 {
     public class G19_Categoria
     {
-        public int id { get; set; }
-        public string nombre { get; set; }
+        public int G19_id { get; set; }
+        public string G19_nombre { get; set; }
+        
         public G19_Categoria(int id, string nombre)
         {
-            this.id = id;
-            this.nombre = nombre;
+            this.G19_id = id;
+            this.G19_nombre = nombre;
         }
+        
         public override string ToString()
         {
-            return nombre;
+            return G19_nombre;
         }
     }
 }

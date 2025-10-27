@@ -30,16 +30,8 @@
         {
             this.tabStock = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.G19_TxtBoxCategoriaStock = new System.Windows.Forms.TextBox();
             this.G19_BtnStock = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabBusqueda = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.G19_LblResultado = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.G19_BtnBuscar = new System.Windows.Forms.Button();
-            this.G19_TxtBoxBuscar = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabProductos = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.G19_DgvProductos = new System.Windows.Forms.DataGridView();
@@ -54,11 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.G19_TxtBuscarProducto = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.G_19_Tbcontrol = new System.Windows.Forms.TabControl();
+            this.G19_BtnOrdenarProductosDescendente = new System.Windows.Forms.Button();
+            this.G19_BtnOrdenarProductosAscendente = new System.Windows.Forms.Button();
             this.tabCategorias = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -70,26 +59,26 @@
             this.G19_BtnEditarCategoria = new System.Windows.Forms.Button();
             this.G19_BtnCrearCategoria = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.G19_BtnOrdenarCategoriasDescendente = new System.Windows.Forms.Button();
+            this.G19_BtnOrdenarCategoriasAscendente = new System.Windows.Forms.Button();
             this.G19_TxtBuscarCategoria = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.G_19_Tbcontrol = new System.Windows.Forms.TabControl();
+            this.G19_CmbCategoriaProducto = new System.Windows.Forms.ComboBox();
             this.tabStock.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.tabBusqueda.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tabProductos.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.G19_DgvProductos)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.G_19_Tbcontrol.SuspendLayout();
             this.tabCategorias.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.G19_DgvCategorias)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.G_19_Tbcontrol.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabStock
@@ -104,32 +93,24 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.G19_TxtBoxCategoriaStock);
+            this.groupBox3.Controls.Add(this.G19_CmbCategoriaProducto);
             this.groupBox3.Controls.Add(this.G19_BtnStock);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(98, 44);
+            this.groupBox3.Location = new System.Drawing.Point(145, 81);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(320, 261);
+            this.groupBox3.Size = new System.Drawing.Size(358, 238);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Stock total por categoría";
             // 
-            // G19_TxtBoxCategoriaStock
-            // 
-            this.G19_TxtBoxCategoriaStock.Location = new System.Drawing.Point(134, 89);
-            this.G19_TxtBoxCategoriaStock.Margin = new System.Windows.Forms.Padding(2);
-            this.G19_TxtBoxCategoriaStock.Name = "G19_TxtBoxCategoriaStock";
-            this.G19_TxtBoxCategoriaStock.Size = new System.Drawing.Size(127, 20);
-            this.G19_TxtBoxCategoriaStock.TabIndex = 2;
-            // 
             // G19_BtnStock
             // 
-            this.G19_BtnStock.Location = new System.Drawing.Point(123, 150);
+            this.G19_BtnStock.Location = new System.Drawing.Point(117, 134);
             this.G19_BtnStock.Margin = new System.Windows.Forms.Padding(2);
             this.G19_BtnStock.Name = "G19_BtnStock";
-            this.G19_BtnStock.Size = new System.Drawing.Size(80, 19);
+            this.G19_BtnStock.Size = new System.Drawing.Size(128, 25);
             this.G19_BtnStock.TabIndex = 1;
             this.G19_BtnStock.Text = "Calcular stock";
             this.G19_BtnStock.UseVisualStyleBackColor = true;
@@ -138,86 +119,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(68, 93);
+            this.label6.Location = new System.Drawing.Point(152, 66);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Categoría:";
-            // 
-            // tabBusqueda
-            // 
-            this.tabBusqueda.Controls.Add(this.groupBox2);
-            this.tabBusqueda.Location = new System.Drawing.Point(4, 22);
-            this.tabBusqueda.Name = "tabBusqueda";
-            this.tabBusqueda.Size = new System.Drawing.Size(672, 424);
-            this.tabBusqueda.TabIndex = 2;
-            this.tabBusqueda.Text = "Busqueda";
-            this.tabBusqueda.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.G19_LblResultado);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.G19_BtnBuscar);
-            this.groupBox2.Controls.Add(this.G19_TxtBoxBuscar);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(32, 21);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(449, 227);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Busqueda de producto por nombre";
-            // 
-            // G19_LblResultado
-            // 
-            this.G19_LblResultado.AutoSize = true;
-            this.G19_LblResultado.BackColor = System.Drawing.Color.Transparent;
-            this.G19_LblResultado.Location = new System.Drawing.Point(143, 177);
-            this.G19_LblResultado.Name = "G19_LblResultado";
-            this.G19_LblResultado.Size = new System.Drawing.Size(36, 13);
-            this.G19_LblResultado.TabIndex = 5;
-            this.G19_LblResultado.Text = "reyhre";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Resultado:";
-            // 
-            // G19_BtnBuscar
-            // 
-            this.G19_BtnBuscar.Location = new System.Drawing.Point(87, 103);
-            this.G19_BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.G19_BtnBuscar.Name = "G19_BtnBuscar";
-            this.G19_BtnBuscar.Size = new System.Drawing.Size(56, 19);
-            this.G19_BtnBuscar.TabIndex = 2;
-            this.G19_BtnBuscar.Text = "Buscar";
-            this.G19_BtnBuscar.UseVisualStyleBackColor = true;
-            this.G19_BtnBuscar.Click += new System.EventHandler(this.G19_BtnBuscar_Click);
-            // 
-            // G19_TxtBoxBuscar
-            // 
-            this.G19_TxtBoxBuscar.Location = new System.Drawing.Point(128, 51);
-            this.G19_TxtBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.G19_TxtBoxBuscar.Name = "G19_TxtBoxBuscar";
-            this.G19_TxtBoxBuscar.Size = new System.Drawing.Size(97, 20);
-            this.G19_TxtBoxBuscar.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 58);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Nombre:";
             // 
             // tabProductos
             // 
@@ -258,6 +165,7 @@
             this.G19_DgvProductos.RowHeadersVisible = false;
             this.G19_DgvProductos.Size = new System.Drawing.Size(456, 424);
             this.G19_DgvProductos.TabIndex = 14;
+            this.G19_DgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.G19_DgvProductos_CellClick);
             // 
             // colNombre
             // 
@@ -292,8 +200,6 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.G19_TxtBuscarProducto);
             this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(456, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
@@ -310,6 +216,7 @@
             this.G19_BtnEliminarProducto.TabIndex = 14;
             this.G19_BtnEliminarProducto.Text = "Eliminar";
             this.G19_BtnEliminarProducto.UseVisualStyleBackColor = true;
+            this.G19_BtnEliminarProducto.Click += new System.EventHandler(this.G19_BtnEliminarProducto_Click);
             // 
             // G19_BtnEditarProducto
             // 
@@ -319,6 +226,7 @@
             this.G19_BtnEditarProducto.TabIndex = 13;
             this.G19_BtnEditarProducto.Text = "Editar";
             this.G19_BtnEditarProducto.UseVisualStyleBackColor = true;
+            this.G19_BtnEditarProducto.Click += new System.EventHandler(this.G19_BtnEditarProducto_Click);
             // 
             // G19_BtnCrearProducto
             // 
@@ -351,10 +259,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(7, 192);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 12, 2, 2);
+            this.groupBox1.Controls.Add(this.G19_BtnOrdenarProductosDescendente);
+            this.groupBox1.Controls.Add(this.G19_BtnOrdenarProductosAscendente);
+            this.groupBox1.Location = new System.Drawing.Point(8, 127);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(196, 88);
@@ -362,60 +270,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ordenamiento";
             // 
-            // button1
+            // G19_BtnOrdenarProductosDescendente
             // 
-            this.button1.Location = new System.Drawing.Point(3, 52);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 22);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Descendente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.G19_BtnOrdenarProductosDescendente.Location = new System.Drawing.Point(5, 52);
+            this.G19_BtnOrdenarProductosDescendente.Margin = new System.Windows.Forms.Padding(2);
+            this.G19_BtnOrdenarProductosDescendente.Name = "G19_BtnOrdenarProductosDescendente";
+            this.G19_BtnOrdenarProductosDescendente.Size = new System.Drawing.Size(187, 22);
+            this.G19_BtnOrdenarProductosDescendente.TabIndex = 3;
+            this.G19_BtnOrdenarProductosDescendente.Text = "Descendente";
+            this.G19_BtnOrdenarProductosDescendente.UseVisualStyleBackColor = true;
+            this.G19_BtnOrdenarProductosDescendente.Click += new System.EventHandler(this.G19_BtnOrdenarProductosDescendente_Click);
             // 
-            // button2
+            // G19_BtnOrdenarProductosAscendente
             // 
-            this.button2.Location = new System.Drawing.Point(4, 26);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 22);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Ascendente";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Todas"});
-            this.comboBox1.Location = new System.Drawing.Point(7, 156);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 21);
-            this.comboBox1.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 135);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 12, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Filtrar por categoría";
-            // 
-            // G_19_Tbcontrol
-            // 
-            this.G_19_Tbcontrol.Controls.Add(this.tabCategorias);
-            this.G_19_Tbcontrol.Controls.Add(this.tabProductos);
-            this.G_19_Tbcontrol.Controls.Add(this.tabBusqueda);
-            this.G_19_Tbcontrol.Controls.Add(this.tabStock);
-            this.G_19_Tbcontrol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.G_19_Tbcontrol.Location = new System.Drawing.Point(0, 0);
-            this.G_19_Tbcontrol.Name = "G_19_Tbcontrol";
-            this.G_19_Tbcontrol.SelectedIndex = 0;
-            this.G_19_Tbcontrol.Size = new System.Drawing.Size(680, 450);
-            this.G_19_Tbcontrol.TabIndex = 1;
+            this.G19_BtnOrdenarProductosAscendente.Location = new System.Drawing.Point(4, 26);
+            this.G19_BtnOrdenarProductosAscendente.Margin = new System.Windows.Forms.Padding(2);
+            this.G19_BtnOrdenarProductosAscendente.Name = "G19_BtnOrdenarProductosAscendente";
+            this.G19_BtnOrdenarProductosAscendente.Size = new System.Drawing.Size(188, 22);
+            this.G19_BtnOrdenarProductosAscendente.TabIndex = 2;
+            this.G19_BtnOrdenarProductosAscendente.Text = "Ascendente";
+            this.G19_BtnOrdenarProductosAscendente.UseVisualStyleBackColor = true;
+            this.G19_BtnOrdenarProductosAscendente.Click += new System.EventHandler(this.G19_BtnOrdenarProductosAscendente_Click);
             // 
             // tabCategorias
             // 
@@ -465,6 +340,7 @@
             this.G19_DgvCategorias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.G19_DgvCategorias.Size = new System.Drawing.Size(456, 424);
             this.G19_DgvCategorias.TabIndex = 16;
+            this.G19_DgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.G19_DgvCategorias_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -505,6 +381,7 @@
             this.G19_BtnEliminarCategoria.TabIndex = 16;
             this.G19_BtnEliminarCategoria.Text = "Eliminar";
             this.G19_BtnEliminarCategoria.UseVisualStyleBackColor = true;
+            this.G19_BtnEliminarCategoria.Click += new System.EventHandler(this.G19_BtnEliminarCategoria_Click);
             // 
             // G19_BtnEditarCategoria
             // 
@@ -514,6 +391,7 @@
             this.G19_BtnEditarCategoria.TabIndex = 15;
             this.G19_BtnEditarCategoria.Text = "Editar";
             this.G19_BtnEditarCategoria.UseVisualStyleBackColor = true;
+            this.G19_BtnEditarCategoria.Click += new System.EventHandler(this.G19_BtnEditarCategoria_Click);
             // 
             // G19_BtnCrearCategoria
             // 
@@ -530,9 +408,9 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Location = new System.Drawing.Point(6, 129);
+            this.groupBox4.Controls.Add(this.G19_BtnOrdenarCategoriasDescendente);
+            this.groupBox4.Controls.Add(this.G19_BtnOrdenarCategoriasAscendente);
+            this.groupBox4.Location = new System.Drawing.Point(8, 129);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
@@ -541,25 +419,27 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ordenamiento";
             // 
-            // button3
+            // G19_BtnOrdenarCategoriasDescendente
             // 
-            this.button3.Location = new System.Drawing.Point(6, 53);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(191, 22);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Descendente";
-            this.button3.UseVisualStyleBackColor = true;
+            this.G19_BtnOrdenarCategoriasDescendente.Location = new System.Drawing.Point(6, 53);
+            this.G19_BtnOrdenarCategoriasDescendente.Margin = new System.Windows.Forms.Padding(2);
+            this.G19_BtnOrdenarCategoriasDescendente.Name = "G19_BtnOrdenarCategoriasDescendente";
+            this.G19_BtnOrdenarCategoriasDescendente.Size = new System.Drawing.Size(191, 22);
+            this.G19_BtnOrdenarCategoriasDescendente.TabIndex = 3;
+            this.G19_BtnOrdenarCategoriasDescendente.Text = "Descendente";
+            this.G19_BtnOrdenarCategoriasDescendente.UseVisualStyleBackColor = true;
+            this.G19_BtnOrdenarCategoriasDescendente.Click += new System.EventHandler(this.G19_BtnOrdenarCategoriasDescendente_Click);
             // 
-            // button4
+            // G19_BtnOrdenarCategoriasAscendente
             // 
-            this.button4.Location = new System.Drawing.Point(6, 27);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 22);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Ascendente";
-            this.button4.UseVisualStyleBackColor = true;
+            this.G19_BtnOrdenarCategoriasAscendente.Location = new System.Drawing.Point(6, 27);
+            this.G19_BtnOrdenarCategoriasAscendente.Margin = new System.Windows.Forms.Padding(2);
+            this.G19_BtnOrdenarCategoriasAscendente.Name = "G19_BtnOrdenarCategoriasAscendente";
+            this.G19_BtnOrdenarCategoriasAscendente.Size = new System.Drawing.Size(191, 22);
+            this.G19_BtnOrdenarCategoriasAscendente.TabIndex = 2;
+            this.G19_BtnOrdenarCategoriasAscendente.Text = "Ascendente";
+            this.G19_BtnOrdenarCategoriasAscendente.UseVisualStyleBackColor = true;
+            this.G19_BtnOrdenarCategoriasAscendente.Click += new System.EventHandler(this.G19_BtnOrdenarCategoriasAscendente_Click);
             // 
             // G19_TxtBuscarCategoria
             // 
@@ -580,6 +460,27 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Buscar por nombre";
             // 
+            // G_19_Tbcontrol
+            // 
+            this.G_19_Tbcontrol.Controls.Add(this.tabCategorias);
+            this.G_19_Tbcontrol.Controls.Add(this.tabProductos);
+            this.G_19_Tbcontrol.Controls.Add(this.tabStock);
+            this.G_19_Tbcontrol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.G_19_Tbcontrol.Location = new System.Drawing.Point(0, 0);
+            this.G_19_Tbcontrol.Name = "G_19_Tbcontrol";
+            this.G_19_Tbcontrol.SelectedIndex = 0;
+            this.G_19_Tbcontrol.Size = new System.Drawing.Size(680, 450);
+            this.G_19_Tbcontrol.TabIndex = 1;
+            // 
+            // G19_CmbCategoriaProducto
+            // 
+            this.G19_CmbCategoriaProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.G19_CmbCategoriaProducto.FormattingEnabled = true;
+            this.G19_CmbCategoriaProducto.Location = new System.Drawing.Point(104, 101);
+            this.G19_CmbCategoriaProducto.Name = "G19_CmbCategoriaProducto";
+            this.G19_CmbCategoriaProducto.Size = new System.Drawing.Size(150, 21);
+            this.G19_CmbCategoriaProducto.TabIndex = 2;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,16 +493,12 @@
             this.tabStock.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.tabBusqueda.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.tabProductos.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.G19_DgvProductos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.G_19_Tbcontrol.ResumeLayout(false);
             this.tabCategorias.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -609,63 +506,54 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            this.G_19_Tbcontrol.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabPage tabStock;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox G19_TxtBoxCategoriaStock;
-        private System.Windows.Forms.Button G19_BtnStock;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TabPage tabBusqueda;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button G19_BtnBuscar;
-        private System.Windows.Forms.TextBox G19_TxtBoxBuscar;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabPage tabProductos;
-        private System.Windows.Forms.TabControl G_19_Tbcontrol;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox G19_TxtBuscarProducto;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabCategorias;
-        private System.Windows.Forms.Button G19_BtnCrearCategoria;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox G19_TxtBuscarCategoria;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView G19_DgvCategorias;
-        private System.Windows.Forms.Button G19_BtnCrearProducto;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
+        private System.Windows.Forms.TabPage tabStock;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button G19_BtnStock;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabPage tabProductos;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView G19_DgvProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button G19_BtnEliminarProducto;
         private System.Windows.Forms.Button G19_BtnEditarProducto;
+        private System.Windows.Forms.Button G19_BtnCrearProducto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox G19_TxtBuscarProducto;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button G19_BtnOrdenarProductosDescendente;
+        private System.Windows.Forms.Button G19_BtnOrdenarProductosAscendente;
+        private System.Windows.Forms.TabPage tabCategorias;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView G19_DgvCategorias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button G19_BtnEliminarCategoria;
         private System.Windows.Forms.Button G19_BtnEditarCategoria;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label G19_LblResultado;
+        private System.Windows.Forms.Button G19_BtnCrearCategoria;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button G19_BtnOrdenarCategoriasDescendente;
+        private System.Windows.Forms.Button G19_BtnOrdenarCategoriasAscendente;
+        private System.Windows.Forms.TextBox G19_TxtBuscarCategoria;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabControl G_19_Tbcontrol;
+        private System.Windows.Forms.ComboBox G19_CmbCategoriaProducto;
     }
 }
 
